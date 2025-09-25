@@ -5,6 +5,7 @@ import LoginScreen from '../screens/LoginScreen';
 import TabNavigator from './TabNavigator';
 import CardDetailScreen from '../screens/CardDetailScreen';
 import { RootStackParamList } from '../types/navigation';
+import SplashScreen from '../screens/SplashScreen';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -14,8 +15,9 @@ const AppNavigator = () => {
     return (
         <Stack.Navigator
             screenOptions={{ headerShown: false }}
-            initialRouteName={isLoggedIn ? "MainTabs" : "Login"}
+            initialRouteName="SplashScreen"
         >
+            <Stack.Screen name="SplashScreen" component={SplashScreen} />
             {!isLoggedIn ? (
                 <Stack.Screen name="Login" component={LoginScreen} />
             ) : (
