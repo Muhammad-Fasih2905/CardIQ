@@ -1,16 +1,7 @@
 export type RootStackParamList = {
-    Login: undefined;
-    SplashScreen: undefined;
-    MainTabs: undefined;
-    CardDetail: { card: any };
+    WelcomeScreen: undefined;
+    SignUpScreen: undefined;
 };
-
-export type TabParamList = {
-    Home: undefined;
-    Scanner: undefined;
-    Profile: undefined;
-};
-
 // Declare navigation types globally
 declare global {
     namespace ReactNavigation {
